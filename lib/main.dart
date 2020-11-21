@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.teal,
         body: SafeArea(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             //mainAxisSize: MainAxisSize.min,
             //crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
@@ -38,51 +39,47 @@ class MyApp extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              Container(
-                color: Colors.white,
-                padding: EdgeInsets.all(10),
-                margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
-                child: Row(
-                  children: <Widget>[
-                    Icon(
-                      Icons.phone,
-                      color: Colors.teal.shade900,
-                    ),
-                    Text(
-                      '+7928*******',
-                      style: TextStyle(
-                        color: Colors.teal.shade900,
-                        fontFamily: 'Source Sans Pro',
-                        fontSize: 20,
-                      ),
-                    ),
-                  ],
+              SizedBox(
+                height: 20,
+                width: 150,
+                child: Divider(
+                  color: Colors.teal.shade100,
                 ),
               ),
-              Container(
+              Card(
                 color: Colors.white,
-                padding: EdgeInsets.all(10),
                 margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
-                child: Row(
-                  children: <Widget>[
-                    Center(
-                      child: Icon(
-                        Icons.email,
-                        color: Colors.teal.shade900,
-                      ),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.phone,
+                    color: Colors.teal.shade900,
+                  ),
+                  title: Text(
+                    '+7928*******',
+                    style: TextStyle(
+                      color: Colors.teal.shade900,
+                      fontFamily: 'Source Sans Pro',
+                      fontSize: 20,
                     ),
-                    SizedBox(
-                      width: 10,
+                  ),
+                ),
+              ),
+              Card(
+                color: Colors.white,
+                margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.email,
+                    color: Colors.teal.shade900,
+                  ),
+                  title: Text(
+                    'vol********@ya.ru',
+                    style: TextStyle(
+                      color: Colors.teal.shade900,
+                      fontFamily: 'Source Sans Pro',
+                      fontSize: 20,
                     ),
-                    Text(
-                      'vol********@ya.ru',
-                      style: TextStyle(
-                        color: Colors.teal.shade900,
-                        fontFamily: 'Source Sans Pro',
-                        fontSize: 20,
-                      ),
-                    ),
-                  ],
+                  ),
                 ),
               ),
             ],
